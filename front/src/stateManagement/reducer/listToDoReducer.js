@@ -7,7 +7,7 @@ const listTodoReducer = (state, action) => {
         });
         return { ...state, list: { elements: listUpDelete } };
   
-      case "add-item":
+      case "add-list":
         const listUp = state.list.elements;
         listUp.push(action.item);
         return { ...state, list: { elements: listUp } };
