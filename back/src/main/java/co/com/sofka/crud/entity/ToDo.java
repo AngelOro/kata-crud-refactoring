@@ -13,17 +13,6 @@ public class ToDo {
     private String name;
     private boolean completed;
 
-    @ManyToOne
-    private ListToDo listToDo;
-
-    public ListToDo getListToDo() {
-        return listToDo;
-    }
-
-    public void setListToDo(ListToDo listToDo) {
-        this.listToDo = listToDo;
-    }
-
     public Long getId() {
         return id;
     }

@@ -5,13 +5,11 @@ public class ToDoModel {
     private Long id;
     private String name;
     private boolean completed;
-    private Long idList;
 
-    public ToDoModel(Long id, String name, boolean completed, Long idList) {
+    public ToDoModel(Long id, String name, boolean completed) {
         this.id = id;
         this.name = name;
         this.completed = completed;
-        this.idList = idList;
     }
 
     public Long getId() {
@@ -38,11 +36,4 @@ public class ToDoModel {
         this.completed = completed;
     }
 
-    public Long getIdList() {
-        return idList;
-    }
-
-    public void setIdList(Long idList) {
-        this.idList = idList;
-    }
 }
