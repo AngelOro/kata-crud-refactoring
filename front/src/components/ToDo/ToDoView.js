@@ -50,7 +50,7 @@ const ToDoView = () => {
       textDecoration: 'line-through'
     };
     return <div className="todoList">
-      <table className="table-todo table-hover table-sm">
+      <table className="table-todo table table-dark table-hover">
         <thead className="head-table">
           <tr>
             <th scope="col">ID</th>

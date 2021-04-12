@@ -20,22 +20,21 @@ form{
 }
 
 .table-todo{
-    background-color: rgb(255, 255, 255);
     text-align: center;
     border-collapse: collapse;
-    width: 50%;     
+    width: 60% !important;    
     margin: auto;
     position:relative;
     padding-top: 40px;
 }
 
 .head-table tr{
-    border-bottom: black;
-    border-style: inherit;
+    /* border-bottom: black;
+    border-style: inherit; */
 }
 
 tr:nth-child(even){
-    background-color: #ddd;
+    /* background-color: #ddd; */
 }
 
 .icon-todoList{
