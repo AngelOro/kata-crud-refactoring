@@ -5,7 +5,7 @@ import ToDoView from "./ToDoView";
 class ToDoContainer extends Component {
   render() {
     return (
-        <div>
+        <div className="col-sm-12">
           <ToDoForm />
           <ToDoView />
         </div>

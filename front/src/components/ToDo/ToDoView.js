@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { Store } from '../../stateManagement/store/StoreProvider';
-import { HOST_API } from '../App'
+import { HOST_API } from '../../App'
 
 const ToDoView = () => {
     const { dispatch, state: { todo } } = useContext(Store);
@@ -49,23 +49,24 @@ const ToDoView = () => {
     const decorationDone = {
       textDecoration: 'line-through'
     };
-    return <div>
-      <table >
-        <thead>
+    return <div className="todoList">
+      <table className="table-todo table-hover table-sm">
+        <thead className="head-table">
           <tr>
-            <td>ID</td>
-            <td>Tarea</td>
-            <td>¿Completado?</td>
+            <th scope="col">ID</th>
+            <th scope="col">Tarea</th>
+            <th scope="col">¿Completado?</th>
+            <th colSpan="2">Acciones</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="body-table">
           {currentList.map((todo) => {
-            return <tr key={todo.id} style={todo.completed ? decorationDone : {}}>
+            return <tr className="tr-table" key={todo.id} style={todo.completed ? decorationDone : {}}>
               <td>{todo.id}</td>
               <td>{todo.name}</td>
               <td><input type="checkbox" defaultChecked={todo.completed} onChange={(event) => onChange(event, todo)}></input></td>
-              <td><button onClick={() => onDelete(todo.id)}>Eliminar</button></td>
-              <td><button onClick={() => onEdit(todo)}>Editar</button></td>
+              <td id="td-actions"><button className="btn btn-info" onClick={() => onEdit(todo)}>Editar</button></td>
+              <td id="td-actions"><button className="btn btn-danger" onClick={() => onDelete(todo.id)}>Eliminar</button></td>
             </tr>
           })}
         </tbody>
